@@ -1,0 +1,200 @@
+/* Custom Stylesheet */
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+html, body {
+    margin: 0;
+    height: 100%!important;
+    min-height: 100%!important;
+    background-color: #263238;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%!important;
+    
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body, html {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#37474f+0,263238+100 */
+    background: #37474f;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #37474f 0%, #263238 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #37474f 0%, #263238 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #37474f 0%, #263238 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37474f', endColorstr='#263238', GradientType=0);
+    /* IE6-9 */
+}
+
+.containery {
+    width: 90%!important;
+    margin: 0;
+    margin-left: 80px;
+}
+
+.nav-wrapper {
+    background-color: #37464e;
+}
+
+#logo {
+    padding-left: 80px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+.sidenav {
+    width: 60px;
+}
+
+.sidenav-logo {
+    width: 80%;
+    padding: 0!important;
+    margin-left: 6px!important;
+    border-radius: 30px;
+    background-color: #ff9800!important;
+    margin-bottom: 18px!important;
+}
+
+.sidenav-logo i {
+    margin: 0 12px!important;
+}
+
+.sidenav-btn {
+    width: 100%;
+    padding: 0!important;
+    margin: 0px!important;
+}
+
+.sidenav-btn i {
+    margin: 0 18px!important;
+    color: white!important;
+}
+
+
+.sidenav-icon {
+    margin: 0 auto;
+}
+
+.map {
+    height:500px; 
+    width:98%; 
+    display:flex;
+    margin: 0px auto ;
+    margin-bottom: 32px;
+}
+
+.page-footer {
+/*
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+*/
+}
+
+px-simple-bar-chart {
+    display: block;
+    margin: 0 auto;
+}
+
+.disinline {
+    display: inline!important;
+}
+
+
+
+
+
+/*SCHEMA*/
+
+
+
+
+ul.collection{
+	margin-left:80px!important;
+	width: 90%;
+}
+
+li{
+	color: beige;
+	background-color:rgba(0,0,0,0)!important;
+	height:60px;
+}
+
+.drop{
+	display: inline-block;
+	float: right;
+	margin: auto 0;
+	
+}
+
+.title{
+	background-color:darkorange!important;
+	height: 100px;
+}
+
+.disc{
+	margin-left: 2px;
+	color: #26a69a;
+}
+
+
+
+
+
+/*SEARCH*/
+
+label {
+    color: white;
+}
+
+
+.hosbital{
+	background-color: #546e7a;
+	display: none;
+	border-radius: 25px;
+	font-size: 15px;
+    color: white;
+}
+
+.hosbital li{
+	color: #c0d8de;
+}
+
+.hosDisc{
+	color: #26a69a;
+}
+
+#marker{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 400px;
+    left: 550px;
+    color: white;
+    z-index: 234234;
+}
+
+#marker1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 460px;
+    left: 525px;
+    color: white;
+    z-index: 234234;
+}

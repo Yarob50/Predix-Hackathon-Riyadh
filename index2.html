@@ -1,0 +1,83 @@
+<html>
+<head>
+
+	<!-- Predix components used by this app view -->
+<link rel="import" href="../bower_components/px-card/px-card.html" />
+<link rel="import" href="../bower_components/px-simple-bar-chart/px-simple-bar-chart.html" />
+<link rel="import" href="../bower_components/px-key-value-pair/px-key-value-pair.html" />
+<link rel="import" href="../bower_components/px-gauge/px-gauge.html" />
+<link rel="import" href="../bower_components/px-card/px-card.html" />
+<link rel="import" href="../bower_components/px-vis-timeseries/px-vis-timeseries.html" />
+<link rel="import" href="../bower_components/px-vis-pie-chart/px-vis-pie-chart.html"/>
+<link rel="import" href="../bower_components/px-vis-pie-chart/px-vis-pie-chart.html"/>
+<link rel="import" href="/bower_components/px-map/px-map.html"/>
+<link rel="import" href="/bower_components/px-map/px-map-tile-layer.html"/>
+<link rel="import" href="/bower_components/px-simple-line-chart/px-simple-line-chart.html"/>
+<link rel="import" href="/bower_components/px-simple-line-chart/px-simple-line-chart.html"/>
+
+     
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+
+<!-- Load styles -->
+<link rel="import" href="/css/px-sample-app-styles.html" />
+
+</head>
+
+	<style include="px-sample-app-styles"></style>
+	<div class="container">
+		<a class="waves-effect waves-light btn">button</a>
+		<a class="btn">hello</a>
+
+
+
+		<div class="row">
+			<div class="col m3">
+				<div class="flex flex--wrap flex--justify">
+			        <div class="gaugeContainer u-p u-mb flex flex--col">
+				      <div class="flex u-mb">
+				        <px-key-value-pair id="key2" key="Measured Output" value="15MW" size="delta"></px-key-value-pair>
+
+				        <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [53,122,128,120,56,94,102] ]' colors='["#fBA662"]'></px-simple-bar-chart>
+				      </div>
+
+				      <px-gauge id="gauge2" class="gauge2" value="10" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+				    </div>
+
+			        
+			    </div>
+			</div>
+
+			<div class="col m3">
+				<div class="flex flex--wrap flex--justify">
+			        <div class="gaugeContainer u-p u-mb flex flex--col">
+				      <div class="flex u-mb">
+				        <px-key-value-pair id="key2" key="Measured Output" value="15MW" size="delta"></px-key-value-pair>
+
+				        <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [53,122,128,120,56,94,102] ]' colors='["#fBA662"]'></px-simple-bar-chart>
+				      </div>
+
+				      <px-gauge id="gauge2" class="gauge2" value="10" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+				    </div>
+
+			        
+			    </div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	
+
+
+</html>
+
+
+
+
+
+

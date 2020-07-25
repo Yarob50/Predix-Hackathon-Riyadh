@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>Predix Sample Application</title>
+    <meta name="description" content="An example application showing how Predix Design System components work together in an application.">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json">
+
+
+    <!--   Font Awesone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+
+    <!-- CSS  -->
+
+    <link rel="import" href="/bower_components/px-gauge/px-gauge.html" />
+    <link rel="import" href="/bower_components/px-map/px-map.html" />
+    <link rel="import" href="/bower_components/px-map/px-map-tile-layer.html" />
+    <link rel="import" href="/bower_components/px-map/px-map-marker-static.html" />
+    <link rel="import" href="/bower_components/px-simple-bar-chart/px-simple-bar-chart.html" />
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+    <!--
+      Fast bootstrapping of the webcomponents-lite library. Only loads the library
+      if the browser doesn't natively support web components.
+    -->
+    <script type="text/javascript">
+        (function() {
+            'use strict';
+
+            var onload = function() {
+                // For native Imports, manually fire WebComponentsReady so user code
+                // can use the same code path for native and polyfill'd imports.
+                if (!window.HTMLImports) {
+                    document.dispatchEvent(
+                        new CustomEvent('WebComponentsReady', {
+                            bubbles: true
+                        })
+                    );
+                }
+            };
+
+            var webComponentsSupported = (
+                'registerElement' in document && 'import' in document.createElement('link') && 'content' in document.createElement('template')
+            );
+
+            if (!webComponentsSupported) {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
+                script.onload = onload;
+                document.head.appendChild(script);
+            } else {
+                onload();
+            }
+        })();
+
+    </script>
+
+    <!--
+    Load theme files, apply default theme.
+  -->
+    <link rel="import" href="bower_components/px-theme/px-theme-styles.html">
+    <style include="px-theme-styles" is="custom-style"></style>
+
+    <link rel="import" href="src/px-sample-app.html">
+
+    <!--
+      Basic page styles.
+    -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+    </style>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--      <px-sample-app></px-sample-app>-->
+
+
+    <script>
+//        $(document).ready(function() {
+//            $.ajax({
+//                url: "https://yarob-project.run.aws-usw02-pr.ice.predix.io/data/doctors"
+//            }).then(function(data) {
+//                $(".doctors").text(data.length);
+//            });
+//        });
+//
+//        $(document).ready(function() {
+//            $.ajax({
+//                url: "https://yarob-project.run.aws-usw02-pr.ice.predix.io/data/patients"
+//            }).then(function(data) {
+//                $(".patients").text(data.length);
+//            });
+//        });
+
+
+        $(document).ready(function() {
+            $("#marker").on('click', function() {
+                $("#pxgauge").attr("value", "67");
+                console.log("clicked");
+            });
+            $("#marker1").on('click', function() {
+                $("#pxgauge").attr("value", "86");
+                console.log("clicked");
+            });
+        });
+
+    </script>
+
+
+
+
+    <nav class="z-depth-0">
+        <div class="nav-wrapper darken-3">
+            <a href="#!" class="brand-logo" id="logo">Health</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="search.html"><i class="material-icons">search</i></a></li>
+                <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <ul id="slide-out" class="sidenav sidenav-fixed blue-grey darken-4">
+        <li><a class="waves-effect waves-light btn sidenav-logo"><i class="material-icons">cloud</i></a></li>
+
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Compare" href="schema2.html"><i class="fas fa-columns"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="About"><i class="fas fa-question-circle"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+    <div class="containery">
+
+        <div class="row">
+            <div class="col s4">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text waves-effect waves-block waves-light activator">
+                        <span class="card-title">Hospitals</span>
+                        <p>2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text waves-effect waves-block waves-light activator">
+                        <span class="card-title">Patients</span>
+                        <p class="patients">200</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text waves-effect waves-block waves-light activator">
+                        <span class="card-title ">Doctors</span>
+                        <p class="doctors">10</p>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="col s3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text waves-effect waves-block waves-light activator">
+                        <span class="card-title">Ratings</span>
+                        <p>600</p>
+                    </div>
+                </div>
+            </div>
+-->
+        </div>
+
+
+
+
+        <div class="map">
+            <div id="marker">
+            </div>
+            <div id="marker1">
+            </div>
+
+
+            <px-map zoom="5" lat="24.7813293" lng="46.6850309" flex-to-size disable-scroll-zoom disable-touch-zoom>
+                <px-map-marker-static id="hospita1-marker" lat="24.7813293" lng="46.6850309" type="warning"></px-map-marker-static>
+                <px-map-marker-static id="hospita2-marker" lat="26.9" lng="47.9" type="info"></px-map-marker-static>
+                <px-map-tile-layer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'></px-map-tile-layer>
+            </px-map>
+
+
+            <!--
+<px-map fit-to-markers zoom="5" lat="24.7813293" lng="46.6850309" flex-to-size disable-scroll-zoom disable-touch-zoom>
+    <px-map-layer-group name="Landmarks">
+        <px-map-marker-static lat="24.7813293" lng="46.6850309" type="info"></px-map-marker-static>
+    </px-map-layer-group>
+</px-map>
+-->
+
+            <!--
+            <div style="height:400px; width:600px; display:flex">
+                <px-map flex-to-size fit-to-markers disable-scroll-zoom disable-touch-zoom>
+                    <px-map-marker-static lat="37.7673626" lng="-121.9595048" type="important"></px-map-marker-static>
+                    <px-map-tile-layer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'></px-map-tile-layer>
+                </px-map>
+            </div>
+-->
+
+            <!--
+
+            <px-map flex-to-size disable-scroll-zoom disable-touch-zoom>
+                <px-map-tile-layer-google key="AIzaSyBnfLmIuMNxJItT3QXFfbzCwhKV2KobCFA" imagery="roadmap" language="en"></px-map-tile-layer-google>
+            </px-map>
+-->
+        </div>
+
+
+
+
+
+
+
+        <div class="row">
+
+
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text waves-effect waves-block waves-light activator">
+                        <span class="card-title center-align" style="margin-bottom: 70px;">Average Hospital Rating</span>
+                        <div class="pxwid" style="width: 300px; margin: 0 auto; margin-bottom: 30px;">
+                            <px-gauge id="pxgauge" width="100px" height="300px" value="86" min="0" max="100" unit="%" normal="[ [0, 100] ]">
+                            </px-gauge>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--            style="padding-left: 60px; padding-bottom: 20px;"-->
+            <!--           style="margin-left: 320px; margin-top: 20px"-->
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title center-align">Admitted Patients Last Month</span>
+                        <p class="bar-chart-legend"> <span style="padding-left: 160px;" class="hospital1">Hospital 1</span><span style="margin-left: 130px;">Hospital 2</span></p>
+                        <div class="pxwid" style="width: 300px; margin: 0 auto">
+                            <px-simple-bar-chart width="auto" height="275" chart-data='[[112,57]]' colors='["#6FC9FA"]' legend-order="sequential"></px-simple-bar-chart>
+                            <p class="bar-chart-legend" style="padding-left: 45px;"> 23 <span class="hospital2" style="margin-left: 180px;">8</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--
+        <div class="row">
+
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title center-align">Chart Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title center-align">Chart Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+-->
+
+    </div>
+
+
+        <footer class="page-footer orange">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Company Bio</h5>
+                        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Settings</h5>
+                        <ul>
+                            <li><a class="white-text" href="#!">Link 1</a></li>
+                            <li><a class="white-text" href="#!">Link 2</a></li>
+                            <li><a class="white-text" href="#!">Link 3</a></li>
+                            <li><a class="white-text" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Connect</h5>
+                        <ul>
+                            <li><a class="white-text" href="#!">Link 1</a></li>
+                            <li><a class="white-text" href="#!">Link 2</a></li>
+                            <li><a class="white-text" href="#!">Link 3</a></li>
+                            <li><a class="white-text" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+        <script>
+            M.AutoInit();
+
+        </script>
+
+        <!--
+      Attempt to register a service worker with the correct scope. Fail quietly
+      if this doesn't work, but log the result to the console.
+    -->
+        <script async type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                    // Do not register for dev environments
+                    console.log('Dev environment detected, skipping ServiceWorker registration.');
+                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                        // Unregister any service workers that exist for this app
+                        for (var i = 0; i < registrations.length; i++) {
+                            console.log('Unregistering existing service worker.');
+                            registrations[i].unregister();
+                        }
+                    });
+                } else {
+                    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }).catch(function(err) {
+                        // Registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                }
+            }
+
+        </script>
+
+
+
+
+
+
+</body>
+
+</html>

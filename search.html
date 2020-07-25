@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matching Schemas</title>
+
+
+    <!--   Font Awesone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <nav class="z-depth-0">
+        <div class="nav-wrapper darken-3">
+            <a href="#!" class="brand-logo" id="logo">Health</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <ul id="slide-out" class="sidenav sidenav-fixed blue-grey darken-4">
+        <li><a class="waves-effect waves-light btn sidenav-logo"><i class="material-icons">cloud</i></a></li>
+
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
+        <li><a style="background-color: orange;" class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Compare" href="schema.html"><i class="fas fa-columns"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="About"><i class="fas fa-question-circle"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row cont">
+        <div class="col s3"></div>
+        <form class="col s6">
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="input-field col s5">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">National ID</label>
+                </div>
+                <br>
+                <div class="col s2">
+                    <a class="btn-floating btn-sml waves-effect waves-light orange h"><i class="material-icons">search</i></a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+    <div class="row">
+
+        <div class="col s3"></div>
+
+        <div class="hosbital col s6 ">
+            <div class="row">
+
+                <div class="col s6">
+                    <h4>Hosbital 1</h4>
+                    <hr>
+                </div>
+                <br>
+                <div class="col s3">
+                    <h6>10/12/2011 14:55</h6>
+                </div>
+                <div class="col s3">
+                    <h6>10/22/2011 1:16</h6>
+                </div>
+            </div>
+            <div class="row" id="check1">
+                <div class="col s6">
+                    <h6>Diagnosis:</h6>
+                    <ul>
+                        <li>Code: <br>&nbsp;<span class="hosDisc">
+   						A42.0
+   					</span> </li>
+                        <li>Discription: <br>&nbsp;<span class="hosDisc">
+   						Pulmonary actinomycosis
+   					</span></li>
+                    </ul>
+                </div>
+                <div class="col s6">
+                    <h6>Labs:</h6>
+                    <ul>
+                        <li>Lab Name: <br>&nbsp;<span class="hosDisc">
+   						URINALYSIS: RED BLOOD CELLS
+   					</span></li>
+                        <li>Lab Value: <br>&nbsp;<span class="hosDisc">
+   						1.8
+   					</span></li>
+                        <li>Lab Unit: <br>&nbsp;<span class="hosDisc">
+   						rbc/hpf
+   					</span></li>
+                        <li>Lab Date: <br>&nbsp;<span class="hosDisc">
+   						7/1/1992 1:36
+   					</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+
+<!--
+            <div class="row" id="check2">
+                <div class="row col s6">
+                    <h6>Diagnosis:</h6>
+                    <ul>
+                        <li>Code: <br>&nbsp;<span class="hosDisc">
+   						5895
+   					</span></li>
+                        <li>Discription: <br>&nbsp;<span class="hosDisc">
+   						sdsdsdsd
+   					</span></li>
+                    </ul>
+                </div>
+                <div class="row col s6">
+                    <h6>Labs:</h6>
+                    <ul>
+                        <li>Lab Name: <br>&nbsp;<span class="hosDisc">
+   						Blod
+   					</span></li>
+                        <li>Lab Value: <br>&nbsp;<span class="hosDisc">
+   						negative
+   					</span></li>
+                        <li>Lab Unit: <br>&nbsp;<span class="hosDisc">
+   						MM
+   					</span></li>
+                        <li>Lab Date: <br>&nbsp;<span class="hosDisc">
+   						2/6/2018
+   					</span></li>
+                    </ul>
+                </div>
+            </div>
+-->
+
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+
+        <div class="col s3"></div>
+
+
+        <div class="hosbital col s6">
+            <div class="row">
+
+                <div class="col s6">
+                    <h4>Hosbital 2</h4>
+                    <hr>
+                </div>
+                <br>
+                <div class="col s3">
+                    <h6>10/12/2011 14:55</h6>
+                </div>
+                <div class="col s3">
+                    <h6>10/22/2011 1:16</h6>
+                </div>
+            </div>
+            <div class="row" id="check1">
+                <div class="row col s6">
+                    <h6>Diagnosis:</h6>
+                    <ul>
+                        <li>Code: <br>&nbsp;<span class="hosDisc">
+   						D65
+   					</span></li>
+                        <li>Discription: <br>&nbsp;<span class="hosDisc">
+   						Disseminated intravascular coagulation [defibrination syndrome]
+   					</span></li>
+                    </ul>
+                </div>
+                <div class="row col s6">
+                    <h6>Labs:</h6>
+                    <ul>
+                        <li>Lab Name: <br>&nbsp;<span class="hosDisc">
+   						METABOLIC: GLUCOSE
+   					</span></li>
+                        <li>Lab Value: <br>&nbsp;<span class="hosDisc">
+   						103.3
+   					</span></li>
+                        <li>Lab Unit: <br>&nbsp;<span class="hosDisc">
+   						mg/dL
+   					</span></li>
+                        <li>Lab Date: <br>&nbsp;<span class="hosDisc">
+   						6/30/1992 9:35
+   					</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+<!--
+            <div class="row" id="check2">
+                <div class="row col s6">
+                    <h6>Diagnosis:</h6>
+                    <ul>
+                        <li>Code: <br>&nbsp;<span class="hosDisc">
+   						5895
+   					</span></li>
+                        <li>Discription: <br>&nbsp;<span class="hosDisc">
+   						sdsdsdsd
+   					</span></li>
+                    </ul>
+                </div>
+                <div class="row col s6">
+                    <h6>Labs:</h6>
+                    <ul>
+                        <li>Lab Name: <br>&nbsp;<span class="hosDisc">
+   						Blod
+   					</span></li>
+                        <li>Lab Value: <br>&nbsp;<span class="hosDisc">
+   						negative
+   					</span></li>
+                        <li>Lab Unit: <br>&nbsp;<span class="hosDisc">
+   						MM
+   					</span></li>
+                        <li>Lab Date: <br>&nbsp;<span class="hosDisc">
+   						2/6/2018
+   					</span></li>
+                    </ul>
+                </div>
+            </div>
+-->
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    
+    <script>
+	 
+	 $(".h").on("click",function(){
+		$(".hosbital").css("display","block");
+	 });
+	
+</script>
+</body>
+
+</html>

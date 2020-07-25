@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matching Schemas</title>
+
+
+    <!--   Font Awesone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <nav class="z-depth-0">
+        <div class="nav-wrapper darken-3">
+            <a href="#!" class="brand-logo" id="logo">Health</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="search.html"><i class="material-icons">search</i></a></li>
+                <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <ul id="slide-out" class="sidenav sidenav-fixed blue-grey darken-4">
+        <li><a class="waves-effect waves-light btn sidenav-logo"><i class="material-icons">cloud</i></a></li>
+
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
+        <li><a style="background-color: orange;" class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Compare" href="schema.html"><i class="fas fa-columns"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="About"><i class="fas fa-question-circle"></i></a></li>
+        <li><a class="waves-effect waves-orange btn sidenav-btn blue-grey darken-4 z-depth-0 tooltipped" data-position="right" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+
+    <div class="row">
+        <div class="col s6">
+            <ul class="collection with-header">
+
+                <li class="collection-header title center-align valign">
+                    <h4>Patient Table</h4>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>NationalID:
+
+
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn drop' href='#' data-target='dropdown1' id="matched">Matched Column</a>
+						
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li id="l1"><a href="#!">UserID</a></li>
+							<li id="l2"><a href="#!">Language</a></li>
+							<li id="l3"><a href="#!">Country</a></li>
+							<li id="l4"><a href="#!">PatientDateOfBirth</a></li>
+							<li id="l5"><a href="#!">DoctorID</a></li>
+							
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The national Id of the patient</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>Gender:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="matched2">Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li id="l1"><a href="#!">UserID</a></li>
+							<li id="l2"><a href="#!">Language</a></li>
+							<li id="l3"><a href="#!">Country</a></li>
+							<li id="l4"><a href="#!">PatientDateOfBirth</a></li>
+							<li id="l5"><a href="#!">DoctorID</a></li>
+							
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Sex</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DateOfBirth
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="matched3">Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Pationt Birthdate</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>Nationality:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="matched4">Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Patient Nationality</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>Status:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="matched5">Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Marital Status of the
+patient
+</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>SpokenLanguage:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc"> 		Patient’s spoken language
+			</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+        <div class="col s6">
+            <!--    Labs table-->
+
+            <ul class="collection with-header">
+
+                <li class="collection-header title center-align valign">
+                    <h4>Lab Table</h4>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>PID:
+
+
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn drop' href='#' data-target='dropdown1'>Matched Column</a>
+						
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Patient Id in the hospital</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>AddmissionID:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The admission ID</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>LabName:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Lab Name</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>LabValue:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Lab result
+</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>LabUnit:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Lab result unit</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>LabDateTime:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Lab date</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col s6">
+            <!-- DoctorsTable-->
+
+            <ul class="collection with-header">
+
+                <li class="collection-header title center-align valign">
+                    <h4>Doctor Table</h4>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DID:
+
+
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn drop' href='#' data-target='dropdown1'>Matched Column</a>
+						
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Doctor Id in the hospital</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>Name:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Doctor’s full name</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+        <div class="col s6">
+            <!--    Rating table-->
+
+            <ul class="collection with-header">
+
+                <li class="collection-header title center-align valign">
+                    <h4>Rating Table</h4>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>PatientID:
+
+
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn drop' href='#' data-target='dropdown1'>Matched Column</a>
+						
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Patient Id in the hospital
+				</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DID:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Patient Id in the hospital
+</span>
+                    </div>
+                </li>
+
+
+
+                <li class="collection-item">
+                    <div>Rating:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">A rating out of 5</span>
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6">
+            <!--       Diagnosis table-->
+
+
+
+
+
+            <ul class="collection with-header">
+
+                <li class="collection-header title center-align valign">
+                    <h4>Diagnosis Table</h4>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>PatientID:
+
+
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn drop' href='#' data-target='dropdown1'>Matched Column</a>
+						
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Patient Id in the hospital
+				</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DID:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Doctor Id in the hospital
+</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DiagnosisCode:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The diagnosis unique code</span>
+                    </div>
+                </li>
+
+
+                <li class="collection-item">
+                    <div>DiagnosisDiscription:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">Diagnosis description</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>StartDate:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The admission start date
+				</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>EndDate:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The admission end date
+			</span>
+                    </div>
+                </li>
+
+                <li class="collection-item">
+                    <div>AddmissionID:
+                        <span class="secondary-content">
+					 <!-- Dropdown Trigger -->
+					  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matched Column</a>
+
+					  <!-- Dropdown Structure -->
+					  <ul id='dropdown1' class='dropdown-content'>
+							<li><a href="#!">one</a></li>
+							<li><a href="#!">two</a></li>
+							<li class="divider" tabindex="-1"></li>
+							<li><a href="#!">three</a></li>
+							<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+							<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					  </ul>
+				</span>
+                        <br>
+                        <span class="disc">The admission ID
+
+			</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+
+    <script>
+        $('.dropdown-trigger').dropdown();
+
+        $('#matched').dropdown();
+
+        $("#l1").on("click", function() {
+            $("#matched").text($(this).text());
+        });
+
+        $('#matched').dropdown();
+
+        $("#l2").on("click", function() {
+            $("#matched").text($(this).text());
+        });
+
+        $('#matched').dropdown();
+
+        $("#l3").on("click", function() {
+            $("#matched").text($(this).text());
+        });
+
+        $('#matched').dropdown();
+
+        $("#l4").on("click", function() {
+            $("#matched").text($(this).text());
+        });
+
+        $('#matched').dropdown();
+
+        $("#l5").on("click", function() {
+            $("#matched").text($(this).text());
+        });
+
+    </script>
+</body>
+
+</html>
