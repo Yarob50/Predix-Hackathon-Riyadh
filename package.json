@@ -54,7 +54,7 @@
     "https-proxy-agent": "^1.0.0",
     "json-proxy": "^0.9.3",
     "json-server": "^0.8.10",
-    "lodash": "^4.11.2",
+    "lodash": "^4.17.21",
     "passport": "^0.3.2",
     "passport-oauth2-middleware": "^1.0.2",
     "passport-predix-oauth": "^0.1.2",
